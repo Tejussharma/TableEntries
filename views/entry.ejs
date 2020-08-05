@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+
+<body>
+<!-- CSS goes in the document HEAD or added to your external stylesheet -->
+<style type="text/css">
+    table.gridtable {
+        font-family: verdana, arial, sans-serif;
+        font-size: 40px;
+        color: #333333;
+        border-width: 1px;
+        border-color: #666666;
+        border-collapse: collapse;
+    }
+
+    table.gridtable th {
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #dedede;
+    }
+
+    table.gridtable td {
+        border-width: 1px;
+        padding: 18px;
+        border-style: solid;
+        border-color: #666666;
+        background-color: #ffffff;
+    }
+    .one{
+        font-size: 40px;
+        margin: 20px auto;
+    }
+</style>
+
+
+
+     <table class="gridtable">
+        <tr>
+            <th>Value</th>
+            <th>Display</th>
+            <th>description</th>
+        </tr>
+        <% array.forEach(function(aray){  %>
+            <tr>
+                <td><%= aray.value %></td>
+                <td><%= aray.display %></td>
+                <td><%= aray.description %></td>
+            </tr>
+
+       <% }) %>
+      
+        </table>
+<form action="/" method="POST">
+    <div class="one">
+        <label for="text">Value</label>
+        <input minlength="3" class="one" name="inp1" type="text" required>
+    
+        </div>
+        <div class="one">
+            <label for="text">Other</label>
+            <input  minlength="3"  class="one" name="inp2" type="text" required>
+            <button class="one" type="submit">submit</button>
+        </div>
+        </form>
+       
+
+            
+
+    
+</body>
+</html>
